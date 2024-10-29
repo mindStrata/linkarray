@@ -1,3 +1,5 @@
+import { ArrowLeft } from "lucide-react";
+
 export default function NotFound() {
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -16,7 +18,10 @@ export default function NotFound() {
           href="/"
           className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
         >
-          Go Back Home
+          <span className="flex items-center justify-between">
+            <ArrowLeft />
+            Go Back Home
+          </span>
         </a>
       </div>
     </div>
