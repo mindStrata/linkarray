@@ -9,15 +9,17 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import OverView from "./components/dashboard/Overview";
+import OverView from "./components/admin/Overview";
+import UsersData from "./components/admin/Users";
 import "./index.css";
 import AdminDashboardPage from "./pages/AdminDashboard";
 import AuthPage from "./pages/AuthPage";
-import ProfilePage from "./pages/ProfilePage";
+import UserDetails from "./components/admin/UserDetails";
 
 // All Routings
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
+  { path: "/pricing", element: <div>Pricing</div> },
   {
     path: "/auth",
     element: <AuthPage />,
@@ -39,19 +41,19 @@ const router = createBrowserRouter([
         element: <Navigate to="overview" replace />,
       },
       { path: "overview", element: <OverView /> },
-      { path: "user", element: <div>User</div> },
+      {
+        path: "user",
+        element: <UsersData />,
+      },
+      { path: "user/:userid", element: <UserDetails /> },
     ],
-  },
-  {
-    path: "/:username",
-    element: <ProfilePage />,
   },
   { path: "*", element: <NotFound /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ThemeProvider defaultTheme="light" storageKey="linkarray-theme">
+    <ThemeProvider defaultTheme="system" storageKey="linkarray-theme">
       <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>

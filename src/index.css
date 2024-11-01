@@ -12,10 +12,10 @@
   src: url("assets/fonts/Mona-Sans.ttf") format("truetype");
 }
 
-::selection {
+/* ::selection {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-}
+} */
 
 body {
   font-family: "Mona Sans", sans-serif;

@@ -1,4 +1,4 @@
-import AdminDashboardHeader from "@/components/dashboard/AdminDashboardHeader";
+import AdminDashboardHeader from "@/components/admin/AdminDashboardHeader";
 import { Outlet } from "react-router-dom";
 
 export default function AdminDashboardPage() {
